@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/athenarc/EOSCF-Provider-Insights:
+      branch: master
+      repo: https://github.com/athenarc/EOSCF-Provider-Insights.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-orange-snail.sh
+        container: qc.acc_ready-lime-okapi
+  QC.Doc:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-emerald-raccoon.sh
+        container: qc.doc_homey-lilac-alligator
+      github.com/athenarc/EOSCF-Provider-Insights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-beige-heron.sh
+        container: qc.doc_ready-champagne-mammoth
+      github.com/athenarc/EOSCF-Provider-Insights markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-bronze-binturong.sh
+        container: qc.doc_gummy-xanthic-gopher
+  QC.Lic:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-maroon-terrier.sh
+        container: qc.lic_pretty-fuchsia-birman
+  QC.Met:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-myrtle-sparrow.sh
+        container: qc.met_lovely-apricot-giraffe
+  QC.Sec:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-champagne-bordeaux.sh
+        container: qc.sec_stinky-grey-clam
+  QC.Sty:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-malachite-cattle.sh
+        container: qc.sty_stealthy-cinnamon-gopher
+      github.com/athenarc/EOSCF-Provider-Insights hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-harlequin-gar.sh
+        container: qc.sty_scaly-cornflower-mayfly
+  QC.Ver:
+    repos:
+      github.com/athenarc/EOSCF-Provider-Insights get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-platinum-buffalo.sh
+        container: qc.ver_snoopy-goldenrod-pig
+timeout: 5400
