@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/1.7.9
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/athenarc/EOSCF-Provider-Insights:
       branch: master
@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-orange-snail.sh
-        container: qc.acc_ready-lime-okapi
+        - /usr/bin/env sh .sqa/script.tacky-gold-snake.sh
+        container: qc.acc_trippy-ochre-cockroach
   QC.Doc:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-emerald-raccoon.sh
-        container: qc.doc_homey-lilac-alligator
+        - /usr/bin/env sh .sqa/script.lovely-aqua-kiwi.sh
+        container: qc.doc_chewy-cerise-labradoodle
       github.com/athenarc/EOSCF-Provider-Insights git:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-beige-heron.sh
-        container: qc.doc_ready-champagne-mammoth
+        - /usr/bin/env sh .sqa/script.pokey-xanthic-cockroach.sh
+        container: qc.doc_cheeky-cornflower-warthog
       github.com/athenarc/EOSCF-Provider-Insights markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-bronze-binturong.sh
-        container: qc.doc_gummy-xanthic-gopher
+        - /usr/bin/env sh .sqa/script.jumpy-seashell-rottweiler.sh
+        container: qc.doc_snazzy-bronze-bonobo
   QC.Lic:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-maroon-terrier.sh
-        container: qc.lic_pretty-fuchsia-birman
+        - /usr/bin/env sh .sqa/script.randy-violet-ocelot.sh
+        container: qc.lic_shaky-smalt-lion
   QC.Met:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-myrtle-sparrow.sh
-        container: qc.met_lovely-apricot-giraffe
+        - /usr/bin/env sh .sqa/script.hazy-black-bordeaux.sh
+        container: qc.met_muggy-taupe-warthog
   QC.Sec:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-champagne-bordeaux.sh
-        container: qc.sec_stinky-grey-clam
+        - /usr/bin/env sh .sqa/script.lovely-tangerine-mandrill.sh
+        container: qc.sec_skanky-rose-lynx
   QC.Sty:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-malachite-cattle.sh
-        container: qc.sty_stealthy-cinnamon-gopher
+        - /usr/bin/env sh .sqa/script.muzzy-wheat-retriever.sh
+        container: qc.sty_cranky-sangria-spaniel
       github.com/athenarc/EOSCF-Provider-Insights hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-harlequin-gar.sh
-        container: qc.sty_scaly-cornflower-mayfly
+        - /usr/bin/env sh .sqa/script.blurry-salmon-beagle.sh
+        container: qc.sty_frumpy-ivory-magpie
   QC.Ver:
     repos:
       github.com/athenarc/EOSCF-Provider-Insights get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-platinum-buffalo.sh
-        container: qc.ver_snoopy-goldenrod-pig
+        - /usr/bin/env sh .sqa/script.sunny-sapphire-forest.sh
+        container: qc.ver_bumpy-cobalt-koala
 timeout: 5400
